@@ -27,18 +27,21 @@ public class StartFragment extends Fragment {
         btn_start = view.findViewById(R.id.btn_start);
         r_play_with_computer = view.findViewById(R.id.r_play_with_computer);
         r_2_player = view.findViewById(R.id.r_play_2_player);
+
         r_play_with_computer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 MainActivity.multiPlayer = false;
             }
         });
+
         r_2_player.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 MainActivity.multiPlayer = true;
             }
         });
+
         btn_start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

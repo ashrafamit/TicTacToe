@@ -80,7 +80,7 @@ public class ChessboardAdapter extends RecyclerView.Adapter<ChessboardAdapter.Vi
             GameFragment.rl_win.setAnimation(animWin);
             GameFragment.rl_win.startAnimation(animWin);
             GameFragment.img_win.setImageBitmap(draw);
-            GameFragment.txt_win.setText("draw");
+            GameFragment.txt_win.setText("Draw");
         }
     }
 
@@ -92,11 +92,11 @@ public class ChessboardAdapter extends RecyclerView.Adapter<ChessboardAdapter.Vi
                     if(GameFragment.turnO){
                         arrBms.set(position, bmO);
                         GameFragment.turnO = false;
-                        GameFragment.txt_turn.setText("turn of X");
+                        GameFragment.txt_turn.setText("Turn of X");
                     }else{
                         arrBms.set(position, bmX);
                         GameFragment.turnO = true;
-                        GameFragment.txt_turn.setText("turn of O");
+                        GameFragment.txt_turn.setText("Turn of O");
                     }
                     holder.img_item_table.startAnimation(anim_x_o);
                     if (checkWin()){
@@ -116,7 +116,7 @@ public class ChessboardAdapter extends RecyclerView.Adapter<ChessboardAdapter.Vi
                     if(GameFragment.turnO){
                         arrBms.set(position, bmO);
                         GameFragment.turnO = false;
-                        GameFragment.txt_turn.setText("turn of X");
+                        GameFragment.txt_turn.setText("Turn of X");
                     }
                     holder.img_item_table.startAnimation(anim_x_o);
                     if (checkWin()){
@@ -144,7 +144,7 @@ public class ChessboardAdapter extends RecyclerView.Adapter<ChessboardAdapter.Vi
                                     win();
                                 }else{
                                     GameFragment.turnO = true;
-                                    GameFragment.txt_turn.setText("turn of O");
+                                    GameFragment.txt_turn.setText("Turn of O");
                                 }
                                 notifyItemChanged(arrMark.get(p).getId());
                             }
@@ -259,7 +259,7 @@ public class ChessboardAdapter extends RecyclerView.Adapter<ChessboardAdapter.Vi
             MainActivity.scoreX++;
             GameFragment.win_x.setText("X: " + MainActivity.scoreX);
         }
-        GameFragment.txt_win.setText("win");
+        GameFragment.txt_win.setText("Win");
     }
 
     private boolean checkWin() {
